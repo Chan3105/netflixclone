@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300&family=Lato:wght@300&family=Montserrat:wght@300&family=Open+Sans:wght@300&family=Poppins:wght@300&family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <title>Netflix Browse Page</title>
+    <style>
+          header {
+            background-image: url(https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABXz9dJF9SiRgyT05aNbQjD-MK0IyuEzySYlFVsqs-CWjmoc49veCSDGVqbJbrKKWCoeE9F79VRtA2n8zbTLVkSt_-wDp.webp?r=4f5) ;
+            opacity: 1.0;
+            background-size:100%;
+            height: 700px;
+        } 
+        body {
+            background-color:black;
+            color: white;
+        }
+        /* .navbar {
+                position: fixed;
+        } */
+        /* .logo {
+            background-color: black;
+        } */
+        .logo img {
+            width: 150px;
+            margin-top: -18px;
+            margin-left: 26px;
+        }
+        .navlist {
+           
+            margin: 37px 134px;
+            padding: 2px 0px;
+        }
+        .navlist ul{
+            display: flex;
+            flex-direction: row;
+            overflow:auto;
+            margin-top: -114px;
+            margin-left: 14px;
+        }
+        
+       .navlist li{
+            list-style-type: none;
+            
+        }
+       .navlist li a {
+            color: #e5e5e5;
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            line-height: 2.4;
+            padding-right: 20px;
+            font-weight: 600;
+        }
+       .navlist li a:hover {
+            text-decoration: underline;
+            cursor: pointer;
+            color: #757575;
+       }
+       .frame {
+           margin-top: 52px;
+       }
+       
+       .titlelogo {
+           width: fit-content;
+           margin-left: 50px;
+           margin-top: -60px;
+       }
+       .titlelogo img {
+           height: 220px;
+           width: 548px;
+       }
+       h1 {
+           color: white;
+           font-family:  Helvetica, Arial, sans-serif; 
+           font-size: 26px;
+           width: fit-content;
+           margin-left: 47px;
+           margin-top: 15px;
+       }
+       h2{
+           color: white;
+           font-family: 'Inter', sans-serif;
+           font-size: 20px;
+           width: 520px;
+           margin-left: 46px;
+           letter-spacing: 0.1px;
+       }
+       .button {
+           background-color: white;
+           border: 1px solid white;
+           display: flex;
+           flex-direction: row;
+           width: 127px;
+           height: 42px;
+           margin-left: 50px;
+           border-radius: 5px;
+           margin-top: 25px;
+       }
+       .button img {
+           width: 49px;
+           margin: -3px 15px;
+       }
+       #play {
+           color: black;
+       }
+       .categoryname {
+           font-family:  Helvetica, Arial, sans-serif;  
+           font-size: 21px;
+           margin-left: 2px;
+           padding-top: 15px;
+       }
+       h4 {
+           font-family:   Helvetica, Arial, sans-serif;  
+           font-size: 18px;
+           margin: 12px -18px;
+       }
+       #movies {
+           margin: -93px 50px;
+       }
+       .box {
+           border-radius:2px ;
+           width: 228px;
+           height: 130px;
+       }
+       .box:hover {
+           transform: scale(1.6);
+           z-index: 2;
+           transition: 0.4s ease-in-out;
+       }
+       .box img {
+           width: 228px;
+           height: 130px;
+           border-radius: 2px;
+       }
+       .content {
+           display: grid;
+           grid-template-columns: repeat(6,auto);
+           grid-gap: 5px;
+           height: 150px;
+       }
+
+       
+       .footer {
+            display: flex;
+            flex-direction: column;
+            background-color: black;
+            margin-top: 150px;
+            height: 380px;
+            width: 100%;
+            color: grey;
+        }
+
+        .footercontent {
+            display: flex;
+            flex-direction: row;
+            width: 860px;
+            height: 167px;
+            
+            font-size: 13px;
+            box-sizing: border-box;
+        }
+        .footer2 {
+            width: fit-content;
+            margin-top: 68px;
+            margin-left: 296px;
+
+        }
+        .icons {
+            display: flex;
+            flex-direction: row;
+            margin-left: 20px;
+        }
+        .sociallogo img:hover {
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+
+        ul {
+            padding-right: 52px;
+        }
+        
+        li{
+            list-style-type: none;
+            
+        }
+        li a {
+            color: #757575;
+            text-decoration: none;
+            font-family:'Inter', sans-serif;
+            font-size: 12.5px;
+            line-height: 2.4;
+        }
+        li a:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        /* .lasttext {
+            color: #757575;
+            display: block;
+            width: 321px;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            margin-left: 40px;
+            font-weight: 500;
+            letter-spacing: 0.5px; 
+        }
+        .lasttext a {
+            color: #757575;
+            text-decoration: none;
+        }
+        .lasttext a:hover {
+            color: #757575;
+            text-decoration: underline;
+            cursor: pointer;
+        } */
+        .servicecode {
+            background: rgba(0,0,0,.4);
+            border: 1px solid #aaa;
+            color:  #757575;
+            font-size: 14px;
+            padding: 5px 10px 5px 10px;
+            border-radius: 2px;
+            margin-left: 35px;
+            border-color: #757575;
+            margin-top: 15px;
+        }
+        h6 {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 13px;
+            color: #757575;
+            font-weight: 300;
+            margin-left: 35px;
+        }
+        #facebook img {
+           
+            width: 45px;
+            margin: 6px 0px;
+        }
+        
+        #instagram img {
+           
+            width: 48px;
+            height: 60px;
+            padding: -21px;
+        }
+        #twitter img {
+           
+            width: 30px;
+            margin-top: 15px;
+        }
+        #youtube img {
+           
+            width: 40px;
+           margin: 7px 15px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="Netflixlogo2-removebg-preview.png">
+            </div>
+            <div class="navlist">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">TV Shows</a></li>
+                    <li><a href="#">Movies</a></li>
+                    <li><a href="#">New & Popular</a></li>
+                    <li><a href="#">My List</a></li>
+                </ul>
+            </div> 
+        </nav>
+
+        <section class="frame">
+            <div class="titlelogo">
+                <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABVFgWgKNC-M7DVv1sNoc9ULaObwThm5JAQmTUHmJ69V741vDlJcqxTEi8bL05JVa4mjWlIvClAMUnNUp7s09xACc7KaOA_Z25nXyVk_y_IYWmrUs5Ti2AIVjXmF7sGYvvmYSg1Y6OW6w5-gnadGuS1lgEtPQg85u6G1vOckC8llaVQ.webp?r=ecd" width="300px" alt="perapalace">
+            </div>
+            <div class="heading">
+                <h1 class="heading">Watch Season 1 now</h1>
+            </div>
+            <div class="description">
+             <h2 class="description">At a historic Istanbul hotel, a journalist is thrust into the past and must stop a plot that could change the fate of modern Turkey.</h2>
+            </div>
+            <div class="button">
+                <div>
+                    <img src="http://simpleicon.com/wp-content/uploads/play1.png" width="50px">
+               </div>
+               <div>
+                 <h4 id="play">Play</h3>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <section id="movies">
+    <section id="popular">
+        <div class="categoryname">
+            <h4 class="categoryname">Popular on Netflix</h4>
+        </div>
+        <div class="content">
+            <div id="1"class="box">
+                <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABbN9GE9teiVB8436F8Qma5tIRBeCua32_CopA5ywho-0_HSIBqe0jFtnGyK-FEpYRh0EV64XIIhGR5kC4M_oZy43s_kYDliHTCng6CiUUz3PwJ7lwn60WDxl9k4E.jpg?r=da8">
+            </div>
+            <div id="2"class="box">
+            <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABbSCk8xTN4ceM1mSMGSinzDC8BUI_syt9hJxs1H8aDKfT1NRGH6dfcMUgRd_A8B51u9gQ_V0Ef4KOljdozUrdo9qaBOkBd1Bhyly7l5B5ff4-iwz292fdexxL0JF.jpg?r=53d">
+            </div>
+            <div id="3"class="box">
+                <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABbwmYjMH73-OJGnzy7YxaFFsqvm3E1Durt9VejvUkpuRvT8LTfUUIT26O-TDzY-R-msfGf_OtVjgOkmbrqZ76UjpBEn0bRUROqQ38o43KMOtiji50Jnaju68LMs7Ttg2YzcbofTahDZpx52rKqJub71N45xgsGy636FO_3yvlTkA4VAVn0QR-hM.jpg?r=ef5">
+            </div>
+            <div id="4"class="box">
+                <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABe1koeWiG6J27z7dxK_1b0Dhgm7NRjd5h8un2LJjYDHMcKQr3ZBTvq3Csuluj-cul2w-irHIU1Qb3Cxyviy9Rj2N2RG33Nbn34IV22jaDZIqNDdeSaYXeqP_MooWjvfqX_obGPjZxYiJlEw3Tq74taJcuVFTY-DG3smaGMNbseM2J58jVbuR80Y.jpg?r=a3b">
+            </div>
+            <div id="5"class="box">
+               <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABStJVtvJN8vgIZap4j8-r1Fj4-Shx51hHfTSLl7Q4jXtxrKHAsKfN3pEPWd_PyceDoqITpJtOFQodDUJmadCNvS7e4Y.webp?r=501"> 
+            </div>
+            <div id="6"class="box">
+                <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfVy5Mx6XmRDfr9fEXf_WBIfqkKtvrrBuZ1-KobyKywftbwPdEiS7my7VW58jJRV4x2IfkViKHGA4hiZ_ui-fuTziX5C5CJBh3sxLqVeAjrUQSYEAkxaGM6c_Zux.jpg?r=c46">
+            </div>
+        </div>
+    </section>
+
+    <section id="onlyonnetflix">
+        <div class="categoryname">
+            <h4 class="categoryname">Only on Netflix</h4>
+        </div>
+        <div class="content">
+            <div id="7" class="box">
+                <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRdstFcvuQoGvB7JE4SCybUebOlXE23zbz3PFOI_Ir9O3yiPV_kSlWfxxfHPtZcThD9qIn7UpDrSDqU8bmK905_HsO_hTdbXlU3CQWSJ93tv7p1470owRsYc01U4EfFpho2a2bM2Y3FxSTvvjui0m4Muzwxq-EjuuSI2cao9Iivepi6smE9vrUc.jpg?r=326">
+            </div>
+            <div id="8" class="box">
+              <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVHUOJmTjLhLc6CDwpJaXOA3IoOiM1qo4WvLEoc4Zn1IIjr2jmmteI9Gnl8a2qcJ-YrZK7KWieXnggH5Rw4J6LoUCINgmy1qTWyXTrInMwN_BkNR7UMqJD6F0LBN.jpg?r=0dc">  
+            </div>
+            <div id="9" class="box">
+              <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABa4lqtEsH4kBg0W9EK4Evfp9439olJhEhzyqOt-IStt17qUSSPFPZMjqBNeeMez6nCX1E17c-sZIyuGoaT69GlSumIsG2UmGGQOtwn_dK0y8qRZgAOT3DCgeBB0F.jpg?r=3dc">  
+            </div>
+            <div id="10"class="box">
+                <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABSZAoRuTD6Z_CpMW8nwBNbY0uqS2FdJErLdMKNh4-AgnEsEpCe_5zVhOlUynibbBBqd4eq2TcfyboE9_5gY-c3pm16mfVL9p7MXc4DMW1JJpL0oTKdbeOZLvUjP7AM4IK4GpWZaE1dd50tNM2dJzqdHCs73UAJqMkEWQ0yz_aD0v6sYH3cSyvmo.jpg?r=479">
+            </div>
+            <div id="11"class="box">
+              <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABYKzEn1E83VftmqOIbU2gPxwphFdA0QF619Fnk9_LgJbwrioR_k7QojtNftVgFNm9vxo0mEg0vcyYMBL02BaTR5xLJT9vpoS1Ber3f1R8scCUspDZ-Tj5qhhsQc1.jpg?r=cee">  
+            </div>
+            <div id="12"class="box">
+                <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfFt1yDUPN_JbOQMTQBWEFoMetE9M98wVwfksR3VP5ZyBG7-2olqb7AX7GSlBHjeyLo1vPF-OSs4rCCZC58dNrujwTtCTP-IniNWR8xfEsyLnSnK9y2ivU8b8iwv.jpg?r=d10">
+            </div>
+        </div>
+    </section>
+
+    <section id="thriller">
+        <div class="categoryname">
+            <h4 class="categoryname">Thriller & Horror</h4>
+        </div>
+        <div class="content">
+            <div id="13" class="box">
+                <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABYWkxyub6FCiN7prUmyO-tjjF2AAv3kX897V4ttHim1HDpqirvQmxdCuuDXm9vfAXXNXaG-xpqQZ835_q4r_aTVOoV8.webp?r=21c">
+            </div>
+            <div id="14" class="box">
+                 <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRVONhHTAhLu2_rkWaIlbE7OfKxdTeHnv8fH_FxdLrCKqYPEpADZoGxM9Ehv6FR4Yo_1Z1q8pwHCcfgKT_FjmaibZjHujxJRcrVPqKZj_JkVbxo3pQit9I-93ZKg.jpg?r=60c">
+            </div>
+            <div id="15" class="box">
+                <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABbadxvG0Y7WuY04UIa4pxyB1oKA1D09aXJs27NNW6kkFF9JXbGMKIky_AsvS7ZBzhNgVG4om8JyyPdKAfyIPCfKzxyKWiSoTfVWgUg03FQAuDf_rJ7VU5EEMAFra.jpg?r=deb">
+            </div>
+            <div id="16" class="box">
+                <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABUumzVSEFlccjA3LCwtp-cRZsdVN0lepDY_d1zMxxsupJwDdoTYajHMnvjOkAuBg-e0Q-pydMNnj_1CkFfOxIJffFQQ.webp?r=2dd">
+            </div>
+            <div id="17" class="box">
+                <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABZ-h3OWvE30XnwlCJ1noPO6DEHosUYSG6CN8Fyx3zmW9Gma2URr03nD8phORSE0QvCBuyPTTU4nX7htAJhUswmaM8uA.webp?r=7de">
+            </div>
+            <div id="18" class="box">
+                 <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABa8hnLMfKTZdyTuOTWWOVi4rbKWcEZPZ_q8QLXw2itV_JoMNe1RsQVikKmyIBbdn4hmxf9KRQXWqyy7LnxwnMCjN0EM.webp?r=b2f">
+            </div>
+        </div>
+    </section>
+
+    <section id="children">
+        <div class="categoryname">
+            <h4 class="categoryname">Children $ Family TV</h4>
+        </div>
+        <div class="content">
+            <div id="19" class="box">
+             <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABQmBhBTuuiUhN-u1utUT4YqGDivWewyk3So5VhavHI8e6Mqu1q7w3DAYK9SdXRgYoNCXuXPQhHscUghmVESm7Pi2IhUzI3D3bKUnb7z2P_0mJx_LvLP0CoR-i4gg.jpg?r=c34" alt="">
+            </div>
+            <div id="20" class="box">
+               <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABdXYN3ESlWsPXHLqDALFj3ac8HSqMrGV3yrLG1rcKR-NVqfm3EVmQZLxzjiM8XSF9cCn-r_Y4J0YSMvt0qub0j4s3Wca4sjw6HMpD3qZu7Tmx_tA3i2SfFB-kLiQ.jpg?r=250" alt="">
+            </div>
+            <div id="21" class="box">
+              <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABckHPgvQxIJoDEFgzGExH1uiYlyo14vo6GVp2DWD0-yC3gcRWxmGfbmeCM7lrMM4dB92vLyZVkL-TX7n3W3rQ350CEiu-7setJy_-J9K9qSAONan_JId4F8we8Wl.jpg?r=ff1" alt="">
+            </div>
+            <div id="22" class="box">
+              <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRIo_pi9JhE13QwY_Q-kjd1pfmoe99GBykB6xIXFNbttWS7_ms9OY05cumOk2CHWbKtlOJcAC9Krz_iUvZ-4WoRPrIM.webp?r=c0c" alt="">
+            </div>
+            <div id="23" class="box">
+              <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABZghWj826cRXOwOLHbytphMPpTGz0jw6iVuUT6KHj_XGWi-rHihGQ6o8REPFCO4XmF-9t1XE8zhvnuHB_2W36BcHFeM.webp?r=8fe" alt="">
+            </div>
+            <div id="24" class="box">
+               <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABTOJSJ-pbE0ElEEAF1WsWtOgHU77w9KNPUnV7a7EoHFut-meZUghIFeu-9xgJpY6YCYYnDKq2jCCkN_j5bRYgLELxS8.webp?r=850" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="indian">
+        <div class="categoryname">
+            <h4 class="categoryname">Indian Movies </h4>
+        </div>
+        <div class="content">
+            <div id="25" class="box">
+             <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABYSViTjqrVzoA9jMvOseIf1UrzDs-22eiMErrQiBsREVZIiuO5A9F0IfUq8mcWo95faVri3uL7hCRavtlFLIFFp7XnTCLzmZ9f9qFlI5AsDhY4ntgaFGrYQTZui3.jpg?r=70c" alt="">
+            </div>
+            <div id="26" class="box">
+                <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABagS-APiJiP8IuQU5P6QfYKK9qsnKCK6E98ehEfNftDsCM0kD0OqRNr3Wgs3ifhlCtQc4R-2qLHkWxGrxs_2n1mA_zw.webp?r=846" alt="">
+            </div>
+            <div id="27" class="box">
+                <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABTWmT9LIHnf8fDQXEnuOUIVqVDlzIa1z86brDLq7O-kw4G6UqGdbVQy7w1I1X04s_4wtVKY1GeZ6GKOaC1fIszT2kQc.webp?r=329" alt="">
+            </div>
+            <div id="28" class="box">
+                <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABWc2y70G26adcwbrqnREjXxZ97uRzBe2SB7HQIFQq_ljPNwofiSJbxXiyRlBKcuAJuGYsXYwFf9hnOUhkdI6Uk8oKbc.webp?r=59e" alt="">
+            </div>
+            <div id="29" class="box">
+                <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABbr_laBA1ZLVWukCf_PNJ56mlTXDsSrVQQKTNRB0b6xMXn41FMv4vATvDqzbp640zY8YKqjA8EFbhw5ja3ztYPnbVo4yvqJ-YzvtJYDLtynTo7oWqaEnFeXEWL-s.jpg?r=8d0" alt="">
+            </div>
+            <div id="30" class="box">
+                <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABXW3aj__M6hxIlSrgS2nBWN6dA_ya_Ok79BEb5Wut-I9htz_0X-zjyqrsNE5y5P3D2lLSvl0cYdE2JRGeFULgHwzLck.webp?r=8b8" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="romance">
+        <div class="categoryname">
+            <h4 class="categoryname">Romance</h4>
+        </div>
+        <div class="content">
+            <div id="31" class="box">
+            <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABR7EbZG8haXxEwu9pn3KV-553AZuuz3KG2z5o-CVnIYp4Z-8SqxuVO8bzr0j1PCHD-LlBAJL8gWYmvsrjoV0kPoQvMfzp0O_zljZinI4yPZ81y1GUjz5yPey6V59.jpg?r=5e4" alt="">
+            </div>
+            <div id="32" class="box">
+              <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABUt35Rrsz9xX9WKJn5rXOFF0b95r2K2Nn4btydT4SHjXNhMq_Hq_W3RPeE9_sIVKgWFhcTW_gdPuymkarYO4JuYfhW8.webp?r=59c" alt="">
+            </div>
+            <div id="33" class="box">
+                <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABb7My2O7wpIl5AgBY6T-PG8Km60rUjd-UK9dDHu9NCyZxCW2o7N6I8fqUW2ZmD41k7bEXsjDCMOJWaDBvd1_X5TKI3U.webp?r=995" alt="">
+            </div>
+            <div id="34" class="box">
+                <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABTFNHEFUJGl3rr3JPpcNIRAWKKQiedOlP0Zrw6QcMXXVuwF1LLCJd5rbsVo28i7zL8SDA7lTxrjL9iYvbVX8zh5HAhg.webp?r=3f3" alt="">
+            </div>
+            <div id="35" class="box">
+                <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABStl97vWn8v42yxTD0Wh2JMVhZVVpmkiG4bcdpOTKFGHGHnjLZkdLqcZ2L1wpxj7BajgDxfeZy5DVVFv8HXsba1I_Fc.webp?r=2c1" alt="">
+            </div>
+            <div id="36" class="box">
+                <img src="https://occ-0-2857-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRj85eW8qXzu5VkvwKWheI9eZ6KRYTuQ2xezmmnRYyFdUV3ZGvHcHBkTFMEZWOXi4n3VrH8QmsRZQUlr3U6sSTyWsE_QopTX7ocUOZOVwXZoSknKCOw9U1mulVvK.jpg?r=54d" alt="">
+            </div>
+        </div>
+    </section>
+</section>
+
+<footer class="footer">
+    <div class="footer2">
+    
+    <!-- <div class="lasttext">Questions? Call <a href="#" class="call"> 000-800-040-1843</a></div> -->
+     <div class="icons">
+         <div id="facebook" class="sociallogo">
+             <img src="https://thumbs.dreamstime.com/b/mobile-173831891.jpg" alt="">
+         </div>
+         <div id="instagram"  class="sociallogo">
+             <img src="https://i.pinimg.com/originals/60/52/64/605264d46df48534f282cdcaa2a583ad.jpg" alt="">
+         </div>
+         <div id="twitter"  class="sociallogo">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgv2Su0x3ICDaY4RZjOlMXSmpbyPppVTMNFQ&usqp=CAU" alt="">
+         </div>
+         <div id="youtube"  class="sociallogo">
+             <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8dea8d27-a9ef-4484-9c20-51f212ebe10f/dd65tbb-545c4f6d-1c6a-4b6f-a19e-499d41142d7d.png/v1/fill/w_894,h_894,q_70,strp/youtube_logo_black_by_revydubz_dd65tbb-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAwMCIsInBhdGgiOiJcL2ZcLzhkZWE4ZDI3LWE5ZWYtNDQ4NC05YzIwLTUxZjIxMmViZTEwZlwvZGQ2NXRiYi01NDVjNGY2ZC0xYzZhLTRiNmYtYTE5ZS00OTlkNDExNDJkN2QucG5nIiwid2lkdGgiOiI8PTEwMDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.s8hGNAjaDb77znDop-F-G22liMVttQDeOOXZi1lcxsM" alt="">
+         </div>
+     </div>
+    <div class="footercontent">
+    <div class="f1">
+        <ul>
+       <li><a href="#">Audio and Subtitles</a></li>
+       <li><a href="#">Media Centre</a></li>
+       <li><a href="#">Privacy</a></li>
+       <li><a href="#">Contact Us</a></li>
+    </ul>
+    </div>
+    <div class="f2">
+        <ul>
+        <li><a href="#">Audio Description</a></li>
+        <li><a href="#">Investor Relations</a></li>
+        <li><a href="#">Legal Notices</a></li>
+    </ul>
+    </div>
+    <div class="f3">
+        <ul>
+        <li><a href="#">Help Centre</a></li>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">Cookie Preferences</a></li>
+    </ul>
+    </div>
+    <div class="f4">
+        <ul>
+        <li><a href="#">Gift Cards</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Corporate Information</a></li>
+    </ul>
+    </div>
+</div>
+    <div class="f5">
+       <button class="servicecode">Service Code</button>
+    </div>
+    <div class="f6">
+        <h6>1997-2022 Netflix, Inc. {38007d31-38bb-4588-8667-f3fe65ffee36}</h6>
+    </div>
+</div>
+
+
+</footer>
+
+
+
+
+    
+</body>
+</html>

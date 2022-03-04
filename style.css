@@ -1,0 +1,218 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+
+#navbar{
+    display:flex;
+    align-items:center;
+    position:relative;
+}
+
+#logo{
+    margin: 30px 45px;
+
+}
+
+#logo img{
+ margin: 3px 6px;
+}
+
+#navbar ul{
+    display:flex;
+}
+
+#navbar::before{
+    content:"";
+    background-color: rgb(247, 216, 218) !important ;
+    position:absolute;
+    height: 100% ;
+    width:100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+
+
+#navbar ul li{
+     list-style: none;
+}
+
+#navbar ul li a{
+    display:block;
+    padding:3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+     color:brown;
+}
+
+
+#navbar ul li a:hover{
+     color:pink;
+     background-color: rgb(216, 55, 55);
+}
+
+
+#home{
+    display:flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+    height: 745px;
+}
+
+#home::before{
+    content:"";
+    position: absolute;
+    /* margin-top: 60px */
+    background: url('Random files/honeycomb3.jpg') no-repeat center center;
+    height: 100%;
+     width: 100% ;
+    z-index:-1;
+    opacity: 0.7;
+
+}
+
+#home h1{
+    color: grey;
+    text-align:center;
+}
+
+#home p{
+    color: black;
+    text-align:center;
+    font-size: 1.5 rem;
+}
+
+.order{
+    padding:6px 20px;
+    border: 2px solid white;
+    background-color:beige ;
+     margin-top: 16px;
+    border-radius:25px  ;
+    cursor: pointer;
+
+}
+
+
+
+
+.primary{
+    font-size: 2.0rem;
+    padding:12px ;
+    font-family: 'Bree Serif', serif;
+
+}
+
+.secondary{
+     font-size: 1.5rem;
+     padding: 12 px;
+     margin-top: 6px;
+    
+}
+
+
+
+.services-container{
+    margin-top: 60px;
+
+}
+
+.services{
+    margin: 34px;
+    display: flex;
+
+    
+
+}
+
+
+.services .box{
+      border: 2px solid brown;
+      padding: 30px;
+      margin: 3px 6px;
+      border-radius: 28px;
+      background: #faece1;
+
+}
+
+.services .box_bs{
+    background-color:rgb(252, 239, 239);
+}
+
+.services .box img{
+    height: 160px;
+    margin: auto;
+    display: block
+
+}
+
+.servies .box p{
+    font-size:0.4rem;
+    
+}
+
+.center{
+    text-align: center;
+}
+
+
+.About-Box {
+    float: left;
+    width: 30%;
+    margin-bottom: 16px;
+    padding: 5px 18px;
+    
+    
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+  }
+  
+  .about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+  clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+  .contact-button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }

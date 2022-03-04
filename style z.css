@@ -1,0 +1,29 @@
+
+
+
+
+.popcuisine, .poprestaurant {
+      list-style-type: circle;
+      padding: 25px;
+      font-family:'Lato', sans-serif;
+      color: rgb(141, 138, 138);
+}
+
+
+.primary center, .secondary center {
+
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+
+.restaurants, .cities {
+    color:rgb(141, 138, 138); 
+    background-color: white;
+    border: white;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: normal;
+}

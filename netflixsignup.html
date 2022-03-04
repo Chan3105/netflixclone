@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Page</title>
+    <style>
+        html {
+        font-size: 65.5%;
+        }
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: white;
+        opacity: 1; /* Firefox */
+         }
+          body {
+            background-image:  linear-gradient(rgba(0, 0, 0, 0.6),rgba(0,0,0,0.6)), url(https://assets.nflxext.com/ffe/siteui/vlv3/8607d312-c4d0-4ce2-955d-50d728ae845f/916c982d-7b63-4815-a46d-4322ecee2587/IN-en-20220226-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+        }
+        .logo img {
+            width: 27.8rem;
+            margin-top: -4.5rem;
+        }
+        #container {
+            border: 0.2rem solid black;
+            background-color: rgba(0, 0, 0, 0.75);
+            color: white;
+        
+            margin-top: -6rem;
+            width: 43.5rem;
+            height: 59.0rem;
+            margin-left: 52rem;
+            border-radius: 0.5rem;
+    
+        }
+        .container2 {
+                 margin-top: 2.4rem;
+                 margin-left: 6.7rem;
+        }
+        h1 {
+            color: white;
+            font-family:  Helvetica, Arial, sans-serif;
+            font-size: 3.1rem;
+        }
+        .emailbox {
+            /* background-color: #757575; */
+            font-family: 'Inter', sans-serif;
+            font-size: 1.5rem;
+            color: white;
+        }
+        .textbox input {
+            background-color: #757575;
+            opacity: 0.5;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 100;
+            color: white;
+            padding: 1.5rem 5.4rem;
+            border-radius: 0.5rem;
+           
+        }
+        
+        .emailbox input {
+            background-color: #757575;
+            opacity: 0.5;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.6rem;
+            color: white;
+            padding: 1.5rem 5.4rem;
+            border-radius: 0.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .passwordbox input {
+            background-color: #757575;
+            opacity: 0.5;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.6rem;
+            color: white;
+            padding: 1.5rem 5.4rem;
+            border-radius: 0.5rem;
+            margin-top: 1.5rem;
+        }
+        .signinlink {
+            
+            margin-top: 5.5rem;
+        }
+        #signin {
+            background-color: #E50914;
+            color: white;
+            font-family: Helvetica, Arial, sans-serif; 
+            text-align: center;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            padding: 1.5rem 12.1rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+        .flex4 {
+            display: flex;
+            flex-direction: row;
+        }
+        .flex4 a {
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.6rem ;
+            text-decoration: none;
+        }
+        .flex4 a:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        #alreadyauser {
+            height: fit-content;
+            margin-top: 1.0rem;
+        }
+        h4 {
+            font-family: Helvetica, Arial, sans-serif;
+              color: #757575;
+              font-size: 1.6rem;
+              font-weight: 300;
+        }
+        .signinnow {
+            margin: 3.2rem 0.2rem;
+            height: fit-content;
+        }
+
+       
+        
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.75);
+            margin-top: 9.0rem;
+        }
+        .lasttext {
+            color: #757575;
+            display: block;
+            width: 32.1rem;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1.6rem;
+            margin-left: 24.1rem;
+            font-weight: 500;
+            letter-spacing: 0.05rem; 
+            margin-bottom: 10.8rem;
+            padding-top: 3.4rem;
+        }
+        .lasttext a {
+            color: #757575;
+            text-decoration: none;
+        }
+        .lasttext a:hover {
+            color: #757575;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        
+        .fcontent {
+
+            display: flex;
+            flex-direction: row;
+            font-size: 1.3rem;
+            margin: 4.1rem 20.2rem;
+            margin-top: -11.0rem;
+        }
+        
+       .fcontent ul {
+            padding-right: 5.2rem;
+        }
+        
+       .fcontent li{
+            list-style-type: none;
+            
+        }
+       .fcontent li a {
+            color: #757575;
+            text-decoration: none;
+            font-family:Helvetica, Arial, sans-serif;
+            font-size: 1.25rem;
+            line-height: 2.4;
+        }
+       .fcontent li a:hover {
+            text-decoration: underline;
+            cursor: pointer;
+       }
+       .f1 {
+           display: flex;
+           flex-direction: column;
+       }
+       .f2 {
+        display: flex;
+           flex-direction: column;
+       } 
+       /* .f3 {
+           display: flex;
+           flex-direction: column;
+       }
+       .f4 {
+        display: flex;
+           flex-direction: column;
+       }  */
+       .f3 {
+           color: #757575;
+            text-decoration: none;
+            font-family:Helvetica, Arial, sans-serif;
+            font-size: 1.25rem;
+       }
+        .f3 a:hover {
+           cursor: pointer;
+           text-decoration: underline;
+       }
+       .f4 {
+           color: #757575;
+            text-decoration: none;
+            font-family:Helvetica, Arial, sans-serif;
+            font-size: 1.25rem;
+       }
+       .f4 ul li a:hover {
+           cursor: pointer;
+           text-decoration: underline;
+       }
+       
+       .search2 {
+            background: rgba(0,0,0,.4);
+            border: 0.1rem solid #aaa;
+            color: white;
+            font-size: 1.7rem;
+            padding: 1.5rem 2.0rem 1.5rem 2.0rem;
+            border-radius: 0.2rem;
+            margin-left: 24.5rem;
+            border-color: #757575;
+        }
+        @media screen and (max-width: 400px) {
+            #container {
+            margin-left: 5rem;
+            margin-top: 0rem;
+            }
+            .lasttext {
+                margin-left: 2rem;
+            }
+            .search2{
+                margin-left: 2rem;
+            }
+            .fcontent{
+                margin-left: 0;
+            }
+            .fcontent ul {
+    padding-right: 0;
+}           .navbar{
+    width: fit-content;
+}
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="netflix.html"><img src="Netflixlogo2-removebg-preview.png"></a> 
+            </div>
+
+        <section id="container">
+            <div class="container2">
+            <div>
+                <h1>Sign Up</h1>
+                </div>
+
+                <div class="textbox">
+                    <input type="text" name="text" id="text" placeholder="First Name" required>
+                </div>
+    
+                <div class="emailbox">
+                    <input type="email" name="email" id="email" placeholder="Email Address" required>
+                </div>
+    
+                <div class="passwordbox">
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                </div>
+
+                <div class="signinlink">
+                    <a href="home.html" id="signin">Sign In</a>
+                </div>
+
+                <div class="flex4">
+                    <div id="alreadyauser">
+                    <h4>Already a user?</h4>
+                   </div>
+                   <div class="signinnow">
+                       <a href="netflixsignin.html" class="signinnow">Sign in now</a>
+                   </div>
+                   </div>
+                </div>
+        </section>
+
+        <footer class="footer">
+
+            <div class="lasttext">Questions? Call <a href="#" class="call"> 000-800-040-1843</a></div>
+             
+            <div class="fcontent">
+                
+             <div class="f1">
+             <ul>
+               <li><a href="#">FAQ</a></li>
+               <li><a href="#">Cookie Preferences</a></li>
+            </ul>
+           </div>
+    
+            <div class="f2">
+                <ul>
+               <li><a href="#">Help Centre</a></li>
+               <li><a href="#">Corporate Information</a></li>
+            </ul>
+            </div>
+             
+             <div class="f3">
+                 <ul>
+               <li><a  href="#">Terms of Use</a></li>
+                </ul>
+            </div>
+    
+            <div class="f4">
+                <ul>
+              <li><a href="#">Privacy</a></li>
+               </ul>
+           </div>
+    
+            </div>
+    
+            <div class="fbutton">
+                <select name="language" class="search2" placeholder="languageswitch">
+                    <option value="">English</option>
+                    <option value="hindi">हिन्दी</option>
+                    </select>
+            </div>
+        </footer>
+    
+
+
+
+
+
+
+
+
+
+    </header>
+    
+</body>
+</html>

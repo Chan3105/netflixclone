@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lato:wght@300&family=Montserrat:wght@300&family=Open+Sans:wght@300&family=Poppins:wght@300&family=Raleway:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>RandomQuoteGenerator</title>
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+        box-sizing: border-box;
+      }
+      body {
+        background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/lr/rm428-0059_1-kzasuezb.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&auto=format&ixlib=js-2.2.1&s=d3a43660eeb60fbc269de6c2e9641db6);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.7;
+      }
+      .container {
+        border: 1px solid rgb(41, 4, 88);
+        width: 600px;
+        display: block;
+        box-sizing: border-box;
+        margin: auto;
+        margin-top: 2%;
+        padding: 12px;
+        padding-bottom: 2%;
+        background-color: rgba(16, 22, 58);
+      }
+
+      .box {
+        border: 5px solid black;
+        margin-top: 10%;
+        padding: 50px;
+        justify-content: center;
+        background-color: rgb(250, 247, 244);
+      }
+
+      header {
+        text-align: center;
+        margin-top: 5%;
+        margin-bottom: -5%;
+        font-size: 2rem;
+        color: white;
+      }
+
+      #authorname {
+        font-family: "Dancing Script", cursive;
+        display: block;
+        width: 30%;
+        margin: auto;
+        margin-top: 10%;
+        margin-left: 33%;
+        margin-bottom: -3%;
+      }
+
+      button {
+        float: right;
+        padding: 5px 7px;
+        display: block;
+        border: 1px solid white;
+        width: 30%;
+        margin-bottom: 10%;
+        margin-top: 3%;
+        border-radius: 4px;
+        background-color: rgb(250, 247, 244);
+      }
+
+      button:hover {
+        cursor: pointer;
+        background-color: rgba(16, 22, 58);
+        color: rgb(250, 247, 244);
+        transition: 0.4s ease-in-out;
+        transform: scale(1.1);
+        margin-right: 10px;
+      }
+
+      .icons {
+        margin-top: 2%;
+      }
+      .like {
+        margin-bottom: 4%;
+      }
+      .tweet {
+        margin-bottom: 3%;
+      }
+      .share {
+        margin-bottom: 5%;
+      }
+      .like:hover {
+        transition: 0.4s ease-in-out;
+        transform: scale(1.1);
+      }
+      .tweet:hover {
+        transition: 0.4s ease-in-out;
+        transform: scale(1.1);
+      }
+      .share:hover {
+        transition: 0.4s ease-in-out;
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>Our Quote for the Day</header>
+      <div class="box">
+        <div class="quote-space">
+          <p id="quote">
+            ''What is success? To laugh often and much; To win the respect of
+            intelligent people and the affection of children; To earn the
+            appreciation of honest critics and endure the betrayal of false
+            friends; To appreciate beauty; To find the best in others; To leave
+            the world a bit better, whether by a healthy child, a garden patch
+            or a redeemed social condition; To know even one life has breathed
+            easier because you have lived; That is to have succeeded.''
+          </p>
+        </div>
+        <div class="author">
+          <span id="authorname">Ralph Waldo Emerson</span>
+        </div>
+      </div>
+      <div class="buttons">
+        <div class="icons">
+          <img
+            src="Like-Icon-SVG-removebg-preview.png"
+            class="like"
+            width="50"
+          />
+          <img src="twitter1-removebg-preview.png" class="tweet" width="60" />
+          <img src="share1-removebg-preview.png" class="share" width="70" />
+
+          <button onclick="newQuote()">Generate your Quote</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var quotes = [
+      "“Think big and don’t listen to people who tell you it can’t be done. Life’s too short to think small.”",
+      "“The only person you are destined to become is the person you decide to be.”",
+      "“Great work is done by people who are not afraid to be great.”",
+      "“There is no heavier burden than an unfulfilled potential.”",
+      "“Your past is not your potential. In any hour you can choose to liberate the future.”",
+      "“The big challenge is to become all that you have the possibility of becoming. You cannot believe what it does to the human spirit to maximize your human potential and stretch yourself to the limit.”",
+      "“It’s not what you’ve got, it’s what you use that makes a difference.",
+      "“Don’t cheat the world of your contribution. Give it what you’ve got.”",
+      "“We’ll never know our full potential unless we push ourselves to find it.”",
+      "“Find the place inside yourself where nothing is impossible.”",
+      "“Continuous effort—not strength or intelligence—is the key to unlocking our potential.”",
+      "“There is no man living who isn’t capable of doing more than he thinks he can do.”",
+      "“Fear and self-doubt have always been the greatest enemies of human potential.”",
+      "“There is no paycheck that can equal the feeling of contentment that comes from being the person you are meant to be.”",
+      "“Sooner or later, those who win are those who think they can.”",
+    ];
+    var authors = [
+      "Tim Ferriss",
+      "Ralph Waldo Emerson",
+      "Fernando Flores",
+      "Charles Schulz",
+      "Marilyn Ferguson",
+      "Jim Rohn",
+      "Zig Ziglar",
+      "Steven Pressfield",
+      "Travis Rice",
+      "Deepak Chopra",
+      "Winston Churchill",
+      "Henry Ford",
+      "Brian Tracy",
+      "Oprah Winfrey",
+      "Richard Bach",
+    ];
+    function newQuote() {
+      var randomNumber = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quote").innerHTML = quotes[randomNumber];
+      document.getElementById("authorname").innerHTML = authors[randomNumber];
+    }
+  </script>
+</html>

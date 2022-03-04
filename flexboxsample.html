@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        #sec2 {
+            background-color: black;
+            margin-top: 8px;
+            display: flex;
+            flex-direction: row-reverse;
+            height: 462px;
+            width: 100%;
+        }
+        .sec2div1{
+            height: 200px;
+            align-self: center;
+            margin-right: 180px;
+            margin-top: 90px;
+        }
+        #sec2h1 {
+            color: white;
+            display: block;
+            width: 566px;
+            height: 114px;
+            font-family: 'Inter', sans-serif;
+            font-size: 48px;
+            margin-top: -47px;
+        }
+        #sec2h2 {
+            color: white;
+            display: block;
+            width: 540px;
+            font-size: 26px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            margin-top: -28px;
+        }
+        .sec2div2 {
+            display: flex;
+            flex-direction: column;
+        }
+        .div2pt1 {
+            margin-right: 120px;
+            margin-top: 19px;
+        }
+        .div2pt1 img {
+            width: 510px;
+        }
+        .div2pt2 {
+            display: flex;
+            flex-direction: row;
+            border: 2px solid rgb(56, 55, 55);
+            margin-top: -120px;
+            margin-left: 80px;
+            width: 330px;
+            height: 100px;
+            border-radius: 10px;
+            background-color: black;
+        }
+        .one img {
+            width: 60px;
+            padding: 9px;
+        }
+        .two {
+            display: flex;
+            flex-direction: column;
+            padding: 12px;
+        }
+        .three {
+            height: fit-content;
+            margin: 32px 39px;
+        }
+        .three img {
+            width: 25px;
+        }
+        h4 {
+            color: white;
+            font-family: Helvetica, Arial, sans-serif; 
+            font-weight: 600;
+        }
+        h5 {
+            color: blue;
+            font-family: Helvetica, Arial, sans-serif; 
+            font-weight: 300;
+            margin-top: -20px;
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+<body>
+   <section id="sec2">  <!-- flexdir=rowrev -->
+        <div class="sec2div1">
+            <h1 id="sec2h1">Download your shows to watch offline. </h1>
+            <h2 id="sec2h2">Save your favourites easily and always have something to watch.</h2>
+        </div>
+        <div class="sec2div2"> <!-- flexdir=col -->
+            <div class="div2pt1">
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg"  >
+            </div>
+            <div class="div2pt2"> <!-- flexdir=row -->
+                <div class="one">
+                    <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png" width="50px">
+                </div>
+                <div class="two"> <!-- flexdir=col -->
+                    <h4>Stranger Things</h4>
+                    <h5>Downloading...</h5>
+                </div>
+                <div class="three">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfWbB640lxeD4tVh_FpmeWaHO094naSHz0bw&usqp=CAU" alt="alternativeforanimation" width="20px">
+                </div>
+            </div>
+        </div>
+       </section>
+</body>
+</html>
